@@ -27,7 +27,7 @@ const upsertPriceRecord = async (price) => {
     id: price?.id,
     product_id: price?.product,
     active: price?.active,
-    currency: price?.currency,
+    currency: price?.currency ?? 0,
     description: price?.nickname,
     type: price?.type,
     unit_amount: price?.unit_amount,

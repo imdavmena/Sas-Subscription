@@ -46,9 +46,9 @@ export default function Account() {
     subscription &&
     new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: subscription.prices.currency,
+      currency: subscription?.prices?.currency ?? 0,
       minimumFractionDigits: 0
-    }).format(subscription.prices.unit_amount / 100);
+    }).format(subscription?.prices?.unit_amount / 100);
 
   return (
     <section className="bg-black mb-32">
